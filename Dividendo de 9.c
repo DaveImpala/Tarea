@@ -2,7 +2,7 @@
 #include <stdlib.h>
 int main()
 {
-    int dividendo, comparacion;
+    int dividendo=0, comparacion, suma;
     float promedio;
     char rep;
 
@@ -21,16 +21,18 @@ int main()
         if(comparacion==0)
         {
             printf("Si es divisible entre 9\n");
+            suma+=dividendo;
         }
         else
         {
             printf("no es divisible entre 9\n");
         }
         fflush(stdin);
-        printf("¿Desea ingresar otro numero?\t");
+        printf("Â¿Desea ingresar otro numero?\t");
         scanf("%c",&rep);
     }while(rep=='s' || rep=='S');
     system("color a1");
+    printf("la suma de los numeros divisores es: %d\n\n",suma);
     system("pause");
     return 0;
 }
